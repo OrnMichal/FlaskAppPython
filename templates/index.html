@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home page</title>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body>
 <h1> Home Page
 </h1>
-<img src="{{ url_for('static', filename='cat.jpg') }}" alt="Cat" width="400" height="500" style="vertical-align:middle;"><br>
-<p><a href="{{ url_for('gallery') }}">Go to gallery</a></p>
-<p><a href="{{ url_for('contact') }}">Go to my email info </a></p>
-<p><a href="{{ url_for('about') }}">Go to my personal information</a></p>
+<img src="{{ url_for('static', filename='cat.jpg') }}" alt="Cat" width="400" height="500" style="border-style:solid;border-color: black;"><br>
+<p><a href="{{ url_for('gallery') }}" style="color:red" >Go to gallery</a></p>
+<p><a href="{{ url_for('contact') }}" style="color:red">Go to my email info </a></p>
+<p><a href="{{ url_for('about') }}" style="color:red">Go to my personal information</a></p>
 
 
 
