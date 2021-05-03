@@ -13,22 +13,6 @@ def index():
 def about():
     return render_template('about.html')
 
-
-    @app.route('/user/<username>', methods=['GET', 'POST'])
-def show_user_profile(username):
-    if request.method == 'POST':
-        return 'HTTP POST for user %s with password %s' % (username, request.form['password'])
-    else:
-        return 'HTTP GET for user %s' % username
-
-@app.route('/error_denied')
-def error_denied():
-    abort(401)
-
- @app.route('/error_internal')
-def error_internal():
-    return render_template('template.html', name='ERROR 505'), 505
-
 @app.route('/error_not_found')
 def error_not_found():
     response = make_response(render_template('template.html', name='ERROR 404'), 404)
