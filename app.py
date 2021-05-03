@@ -11,7 +11,7 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return app.send_static_file('about.html')
 
 
     @app.route('/user/<username>', methods=['GET', 'POST'])
