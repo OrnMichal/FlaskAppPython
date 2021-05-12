@@ -1,22 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery</title>
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+     
+
+
+    <meta charset="UTF-8">
+    <title>gallery</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
 </head>
+<style>
+    .item
+    {
+    transition: .5s ease-in-out;
+    }
+    .item:hover{
+    filter :brightness(80%);
+    }
+
+</style>
 <body>
-<h1>Short gallery with Michael Jackson</h1> <br>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row mt-4">
+        <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="static/jackson22.jpg" class="fancybox" data-fancybox="gallery1">
+                <img src="static/jackson22.jpg" width="100%" height="100%"
+            </a>
+        </div>
+          <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="static/michael1.jpg" class="fancybox" data-fancybox="gallery1">
+                <img src="static/michael1.jpg" width="100%" height="100%"
+            </a>
+        </div>
+    
 
-<img src="{{ url_for('static', filename='michael1.jpg') }}" alt="michael1" width="400" height="500">
-<img src="{{ url_for('static', filename='michael22.jpg') }}" alt="michael3" width="400" height="500" >
-<img src="{{ url_for('static', filename='michael3.jpg') }}" alt="michael3" width="400" height="500" ><br>
-<p><a href="{{ url_for('index') }}" style="color:red">Go back to main page</a></p>
+          <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="static/michael3.jpg" class="fancybox" data-fancybox="gallery1">
+                <img src="static/michael3.jpg" width="100%" height="100%"
+            </a>
+        </div>
+          <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="static/michael22.jpg" class="fancybox" data-fancybox="gallery1">
+                <img src="static/michael22.jpg" width="100%" height="100%"
+            </a>
+        </div>
+          <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="static/michael230.jpg" class="fancybox" data-fancybox="gallery1">
+                <img src="static/michael230.jpg" width="100%" height="100%"
+            </a>
+        </div>
+          <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="static/michael350.jpg" class="fancybox" data-fancybox="gallery1">
+                <img src="static/michael350.jpg" width="100%" height="100%"
+            </a>
+        </div>
+
+    </div>
+
+</div>
 
 
 
 
+
+{% endblock %}
 </body>
 </html>
-

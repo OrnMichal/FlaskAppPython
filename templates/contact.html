@@ -1,21 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact</title>
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        
+
+    <meta charset="UTF-8">
+    <title>contact</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body>
 
+{% extends 'base.html'%}
+{% block content %}
 
-<p><a href="{{ url_for('index') }}" style="color:red">Go back to main page</a></p>
+
+<style>
+    .formularz
+    {
+    padding-left:50px;
+    }
+    .szer
+    {
+     width:300px;
+    }
+
+</style>
+    <form class="formularz">
+        <h1><b>Contact</b></h1>
+    <p> This is a contact page</p>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Mail</span>
+          <input type="text" class="szer" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
 
 
-<p>Here is my email: ornmichal@gmail.com</p><br><p>U can get to email from link below</p>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Nick</span>
+          <input type="text" class="szer" placeholder="Nick" aria-label="Username">
 
-<a href="https://gmail.com/">link text</a>
+        </div>
 
+        <div class="input-group">
+          <span class="input-group-text">Text</span>
+          <textarea class="szer" aria-label="With textarea"></textarea>
+        </div>
+        <br/>
+         <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+{% endblock %}
 
 </body>
 </html>
